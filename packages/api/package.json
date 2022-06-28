@@ -1,0 +1,24 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.ts",
+    "seed": "nodemon src/scripts/seed.ts"
+  },
+  "dependencies": {
+    "@types/pino": "^7.0.5",
+    "dotenv": "^16.0.1",
+    "fastify": "^4.1.0",
+    "fastify-cors": "^6.1.0",
+    "mongoose": "^6.4.0",
+    "nodemon": "^2.0.16",
+    "pino": "^8.0.0",
+    "pino-pretty": "^8.0.0",
+    "ts-node": "^10.8.1"
+  },
+  "devDependencies": {
+    "@types/fastify-cors": "^2.1.0"
+  }
+}

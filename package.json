@@ -1,0 +1,25 @@
+{
+  "name": "Hotel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^8.18.0",
+    "lerna": "^5.1.4",
+    "typescript": "^4.7.4"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "lerna run dev --stream"
+  },
+  "devDependencies": {
+    "@types/fastify-cors": "^2.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint-plugin-react": "^7.30.0"
+  }
+}
+
