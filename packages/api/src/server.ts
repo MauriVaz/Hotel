@@ -8,4 +8,4 @@ const server = fastify({
 
 server.register(mainApp);
 
-server.listen(PORT, '0.0.0.0');
+server.listen(PORT);
