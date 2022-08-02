@@ -4,12 +4,9 @@ import { useState } from 'react';
 import logo from '../public/logo.png';
 import { LoginButton } from './LoginButton';
 import MenuIcon from './MenuIcon';
-import { useTheme } from 'next-themes';
-import Dark from './Dark';
-import Sun from './Sun';
+import Toogle from './Toogle';
 const Menu = () => {
   const [value, setValue] = useState(false);
-  const { theme, setTheme } = useTheme();
   return (
     <div className="p-5 justify-around bg-gray-100">
       <div className="sm:visible md:hidden">
@@ -17,7 +14,7 @@ const Menu = () => {
           <MenuIcon />
         </button>
         {value && (
-          <ul className="flex flex-row text-black font-bold">
+          <ul className="flex flex-col text-black font-bold">
             <li className="cursor-pointer">
               <Link href="/">
                 <Image src={logo} width={120} height={40} />
@@ -34,6 +31,9 @@ const Menu = () => {
             </li>
             <li className="p-2">
               <LoginButton />
+            </li>
+            <li>
+              <Toogle />
             </li>
           </ul>
         )}
@@ -56,13 +56,8 @@ const Menu = () => {
         <li className="p-2">
           <LoginButton />
         </li>
-        <div>
-          <button
-            onClick={() => {
-              theme === 'light' ? setTheme('dark') : setTheme('light');
-            }}>
-            {theme === 'light' ? <Dark /> : <Sun />}
-          </button>
+        <div className="flex align-end">
+          <Toogle />
         </div>
       </ul>
     </div>
