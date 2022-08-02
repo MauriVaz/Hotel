@@ -15,7 +15,12 @@ export const LoginButton = () => {
       {user ? (
         <Link href="/api/auth/logout">
           <div className="flex flex-row align-middle">
-            <img alt="" src={user.picture} width="38" className="rounded" />
+            <img
+              alt="foto"
+              src={user.picture || ''}
+              width="38"
+              className="rounded"
+            />
             {user && <Logout />}
             <div>Logout {user.name || user.nickname}</div>
           </div>
