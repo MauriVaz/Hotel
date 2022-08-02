@@ -4,7 +4,8 @@ import Menu from '../components/Menu';
 import { SWRConfig } from 'swr';
 import { fetcher } from '../lib/fetcher';
 import { UserProvider } from '@auth0/nextjs-auth0';
-
+import Footer from '../components/Footer';
+import { ThemeProvider } from 'next-themes';
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <>
     <SWRConfig
@@ -13,8 +14,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
         fetcher,
       }}>
       <UserProvider>
-        <Menu />
-        <Component {...pageProps} />
+        <ThemeProvider>
+          <Menu />
+          <Component {...pageProps} />
+          <Footer />
+        </ThemeProvider>
       </UserProvider>
     </SWRConfig>
   </>

@@ -10,11 +10,12 @@ const ListValorations = () => {
   }
   return (
     <div className="p-4 mt-6 mb-6">
-      {data.map((valorations: any, i: any) => (
+      {data.map((valorations: any) => (
         <Valorations
-          key={valorations.id}
+          key={valorations._id}
           stars={valorations.stars}
           textValoration={valorations.textValoration}
+          date={valorations.date}
         />
       ))}
     </div>

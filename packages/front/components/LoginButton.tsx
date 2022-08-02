@@ -1,24 +1,23 @@
 import React from 'react';
 import { useUser } from '@auth0/nextjs-auth0';
 import Link from 'next/link';
-import Image from 'next/image';
 import Logout from '../components/Logout';
+import Image from 'next/image';
 
 export const LoginButton = () => {
   const { user, error, isLoading } = useUser();
 
+  console.log(user);
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
-  console.log(user);
   return (
     <div className="flex flex-row cursor-pointer">
       {user ? (
         <Link href="/api/auth/logout">
           <div className="flex flex-row align-middle">
-            <picture className="mr-3 rounded-full">
-              {user && <Logout />}
-            </picture>
-            <div>Logout {user.email || user.nickname}</div>
+            <img alt="" src={user.picture} width="38" className="rounded" />
+            {user && <Logout />}
+            <div>Logout {user.name || user.nickname}</div>
           </div>
         </Link>
       ) : (

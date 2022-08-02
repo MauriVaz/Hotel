@@ -10,8 +10,11 @@ const rooms = () => {
         <title>Habitaciones</title>
       </Head>
 
-      <div className="m-10 flex flex-row justify-between">
-        <div className="p-4 border-4 border-gray-400 max-w-sm rounded overflow-hidden shadow-lg">
+      <p className="mt-4 ml-4 text-red-400">
+        <b>Estos son nuestras habitaciones, tenemos para todos los gustos</b>
+      </p>
+      <div className="m-10 flex flex-col md:flex-row md:justify-center">
+        <div className="p-4 mr-4 border-4 border-gray-400 max-w-sm rounded overflow-hidden shadow-lg">
           <Image
             src={sencilla}
             alt="Habitación sencilla"
@@ -27,7 +30,7 @@ const rooms = () => {
             </p>
           </div>
         </div>
-        <div className="p-4 border-4 border-gray-400 max-w-sm rounded overflow-hidden shadow-lg">
+        <div className="p-4 mr-4 border-4 border-gray-400 max-w-sm rounded overflow-hidden shadow-lg">
           <Image
             src={jacuzzi}
             alt="Habitación con jacuzzi"
@@ -43,7 +46,7 @@ const rooms = () => {
             </p>
           </div>
         </div>
-        <div className="p-4 border-4 border-gray-400 max-w-sm rounded overflow-hidden shadow-lg">
+        <div className="p-4 mr-4 border-4 border-gray-400 max-w-sm rounded overflow-hidden shadow-lg">
           <Image
             src={alberca}
             alt="Habitación con alberca"

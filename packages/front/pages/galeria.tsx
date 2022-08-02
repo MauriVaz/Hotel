@@ -6,10 +6,11 @@ const galeria = () => (
     <Head>
       <title>Galeria</title>
     </Head>
-    <div className="flex flex-row justify-center">
-      <div className="flex-col">
-        <Galeria />
-      </div>
+    <p className="ml-4 mt-4 text-red-400">
+      <b>Haga click en las fotos para verlas ampliadas</b>
+    </p>
+    <div className="m-4 flex flex-row justify-center">
+      <Galeria />
     </div>
   </>
 );

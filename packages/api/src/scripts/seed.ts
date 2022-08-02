@@ -18,23 +18,22 @@ import { Valorations } from '../models/valorations.model';
     textValoration: 'El servicio prestado fue muy agradable',
     stars: 5.0,
   });
-
   await Valorations.create({
     textValoration:
       'La comida es muy buena, pero las porciones pequeñas en comparación',
     stars: 3.0,
   });
-  await Valorations.create({
-    textValoration: 'Todos muy amables y muy bien de precio',
-    stars: 4.5,
-  });
-  await Valorations.create({
-    textValoration: 'Todo mal, el servicio penoso',
-    stars: 2.0,
-  });
-  await Valorations.create({
-    textValoration: 'Habitaciones limpias, comida abundante',
-    stars: 5.0,
-  });
+  // await Valorations.create({
+  //   textValoration: 'Todos muy amables y muy bien de precio',
+  //   stars: 4.5,
+  // });
+  // await Valorations.create({
+  //   textValoration: 'Todo mal, el servicio penoso',
+  //   stars: 2.0,
+  // });
+  // await Valorations.create({
+  //   textValoration: 'Habitaciones limpias, comida abundante',
+  //   stars: 5.0,
+  // });
   await mongoose.disconnect();
 })();
