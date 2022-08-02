@@ -1,5 +1,5 @@
 import { createHook, createStore } from 'react-sweet-state';
-import { mutate } from '../lib/fetcher';
+import { fetcher } from '../lib/fetcher';
 
 const Store = createStore({
   initialState: {
@@ -43,7 +43,7 @@ const Store = createStore({
         const currentAppoint = getState().appointment;
 
         // Send info to DB
-        mutate('/valorations', currentAppoint);
+        fetcher('/valorations', currentAppoint);
 
         // Empty inputs
         setState({
